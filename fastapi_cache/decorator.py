@@ -208,7 +208,7 @@ def cache(
                     etag = f"W/{hash(cached)}"
                     response.headers.update(
                         {
-                            "Cache-Control": f"max-age={ttl}",
+                            "Cache-Control": f"max-age={expire}",
                             "ETag": etag,
                             cache_status_header: "HIT",
                         }
